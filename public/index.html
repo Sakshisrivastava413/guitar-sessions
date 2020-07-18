@@ -579,9 +579,7 @@
           subject,
           message
         }, function (data) {
-          $(".loading").css({
-          "display": "none"
-        });
+          $(".loading").css({ "display": "none" });
         if (data == "sent") {
           $("#name").val('');
           $("#email").val('');
