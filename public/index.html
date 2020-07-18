@@ -568,6 +568,17 @@
   <script>
     $('#the_form').submit(function(e) {
       e.preventDefault();
+      name = $("#name").val();
+      email = $("#email").val();
+      subject = $("#subject").val();
+      message = $("#message").val();
+      $.get("http://localhost:8080/send", {
+          name,
+          email,
+          subject,
+          message
+        }, function (data) {
+      });
     });
   </script>
 </body>
