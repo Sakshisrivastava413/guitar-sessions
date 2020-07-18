@@ -568,6 +568,7 @@
   <script>
     $('#the_form').submit(function(e) {
       e.preventDefault();
+      $(".loading").css({ "display": "block" });
       name = $("#name").val();
       email = $("#email").val();
       subject = $("#subject").val();
@@ -578,8 +579,11 @@
           subject,
           message
         }, function (data) {
+          $(".loading").css({
+          "display": "none"
+        });
       });
-    });
+    })
   </script>
 </body>
 
