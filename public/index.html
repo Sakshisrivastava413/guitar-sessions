@@ -582,6 +582,13 @@
           $(".loading").css({
           "display": "none"
         });
+        if (data == "sent") {
+          $(".sent-message").css({ "display": "block" });
+          setTimeout(function() { $(".sent-message").css({ "display": "none" }); }, 3000);
+        } else {
+          $(".error-message").css({ "display": "block" });
+          setTimeout(function() { $(".error-message").css({ "display": "none" }); }, 3000);
+        }
       });
     })
   </script>
