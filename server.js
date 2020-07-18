@@ -1,10 +1,11 @@
-var express = require("express");
-var nodemailer = require("nodemailer");
-var config = require("./config.js");
+const express = require("express");
+const nodemailer = require("nodemailer");
+const config = require("./config");
+const port = require("./constant");
 
-var app = express();
+const app = express();
 
-var smtpTransport = nodemailer.createTransport({
+const smtpTransport = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: config.GMAIL_USER,
@@ -16,7 +17,7 @@ app.use(express.static(__dirname + "/public"));
 
 app.get("/send", function (req, res) {
   const { name, message, subject, email } = req.query;
-  var mailOptions = {
+  const mailOptions = {
     to: config.GMAIL_USER,
     subject: "True Guitar Learning: " + subject,
     from: 'Contact Form Request' + "<" + config.GMAIL_USER + ">",
@@ -43,7 +44,7 @@ app.get("/send", function (req, res) {
   });
 });
 
-app.listen(8080, function (err) {
+app.listen(port, function (err) {
   if (err) {
     console.log(err);
   } else {
