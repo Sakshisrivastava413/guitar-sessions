@@ -1,4 +1,0 @@
-module.exports={
-    GMAIL_USER:'onlineguitarsession@gmail.com',
-    GMAIL_PASS:'online@class.com
-              }
