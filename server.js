@@ -1,6 +1,5 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
-const config = require("./config");
 const port = require("./constant");
 
 const app = express();
@@ -8,8 +7,8 @@ const app = express();
 const smtpTransport = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: config.GMAIL_USER,
-    pass: config.GMAIL_PASS,
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_PASS,
   },
 });
 
@@ -18,9 +17,9 @@ app.use(express.static(__dirname + "/public"));
 app.get("/send", function (req, res) {
   const { name, message, subject, email } = req.query;
   const mailOptions = {
-    to: config.GMAIL_USER,
+    to: process.env.GMAIL_USER,
     subject: "True Guitar Learning: " + subject,
-    from: 'Contact Form Request' + "<" + config.GMAIL_USER + ">",
+    from: 'Contact Form Request' + "<" + process.env.GMAIL_USER + ">",
     html:
       `<strong>Name:</strong> ${name}
       <br />
