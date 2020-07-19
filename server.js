@@ -1,6 +1,7 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const port = require("./constant");
+require('dotenv').config();
 
 const app = express();
 
