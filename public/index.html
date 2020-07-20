@@ -79,13 +79,16 @@
           <h2>The True 1 on 1 Sessions And No Recorded Videos</h2>
           <div class="d-lg-flex">
             <a href="#contact" class="btn-get-started scrollto">Book Demo Session</a>
-		 <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>-->
-   <a href="https://wa.me/8851788022"target="_blank" class="twitter"><i class="bx bxl-whatsapp"></i></a>         
+			 <div class="btn-watch-video">
+			  <a href="#contact" class="twitter"><i class="bx bxl-whatsapp"></i></a>
+			 </div>
+		  <!--<a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>-->
+               
 		 </div>
         </div>
-        <!-- <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
           <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
-        </div> -->
+        </div>
       </div>
     </div>
 
@@ -353,7 +356,7 @@
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
             <div class="box featured">
-              <h3>Per Class Plan</h3>
+              <h3>Per Class Plan for 1 Session/week</h3>
               <h4><sup>Rs</sup>700<span>per class</span></h4>
               <a href="#contact" class="buy-btn">Get Started</a>
             </div>
@@ -361,7 +364,7 @@
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
             <div class="box">
-              <h3>Four Month Plan</h3>
+              <h3>Four Month Plan for 2 Sessions/week</h3>
               <h4><sup>Rs</sup>12480<span>for 4 month after 22% Off</span></h4>
               <a href="#contact" class="buy-btn">Get Started</a>
             </div>
@@ -574,7 +577,7 @@
       email = $("#email").val();
       subject = $("#subject").val();
       message = $("#message").val();
-      $.get(`${window.location.origin}/send`, {
+      $.get("http://localhost:8080/send", {
           name,
           email,
           subject,
