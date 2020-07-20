@@ -80,7 +80,7 @@
           <div class="d-lg-flex">
             <a href="#contact" class="btn-get-started scrollto">Book Demo Session</a>
 			 <div class="btn-watch-video">
-			  <a href="#contact" class="twitter"><i class="bx bxl-whatsapp"></i></a>
+			  <a href="https://wa.me/8851788022" class="twitter"><i class="bx bxl-whatsapp"></i></a>
 			 </div>
 		  <!--<a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>-->
                
@@ -577,7 +577,7 @@
       email = $("#email").val();
       subject = $("#subject").val();
       message = $("#message").val();
-      $.get("http://localhost:8080/send", {
+      $.get(`${window.location.origin}/send`,{ + $.get("http://localhost:8080/send", {
           name,
           email,
           subject,
