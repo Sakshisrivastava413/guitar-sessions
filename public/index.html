@@ -577,7 +577,7 @@
       email = $("#email").val();
       subject = $("#subject").val();
       message = $("#message").val();
-      $.get(`${window.location.origin}/send`,{ + $.get("http://localhost:8080/send", {
+      $.get("http://localhost:8080/send", {
           name,
           email,
           subject,
